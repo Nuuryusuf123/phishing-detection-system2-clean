@@ -33,6 +33,22 @@ st.set_page_config(
 load_css()
 init_db()
 
+st.markdown(
+    """
+    <style>
+    .block-container{
+        padding-top: 0.8rem !important;
+    }
+    h1{
+        font-size: 3.2rem !important;
+        margin-top: 0rem !important;
+        padding-top: 0rem !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 for key, default in {
     "logged_in": False,
     "role": None,
@@ -124,13 +140,13 @@ hero(
 
 # ---------------- LOGIN PAGE ----------------
 if not st.session_state.logged_in:
-    left, center, right = st.columns([0.9, 1.2, 0.9], gap="large")
+    left, center, right = st.columns([0.95, 1.15, 0.9], gap="large")
 
     with left:
         st.markdown(
             """
-            <div style="display:flex; align-items:center; min-height:420px; justify-content:flex-start;">
-                <div style="font-size:2.3rem; font-weight:700; color:white; text-align:left;">
+            <div style="display:flex; align-items:center; min-height:420px; justify-content:flex-start; padding-left:8px;">
+                <div style="font-size:2.8rem; font-weight:800; color:white; text-align:left; line-height:1.1;">
                     🚀 Welcome
                 </div>
             </div>
@@ -567,6 +583,7 @@ elif page == "Hybrid Detection":
                 st.markdown(pill(url_label), unsafe_allow_html=True)
                 st.write(f"Score: {url_score:.2%}")
                 card_close()
+
             with c:
                 card_open()
                 st.subheader("Hybrid")
