@@ -567,7 +567,6 @@ elif page == "Hybrid Detection":
                 st.markdown(pill(url_label), unsafe_allow_html=True)
                 st.write(f"Score: {url_score:.2%}")
                 card_close()
-
             with c:
                 card_open()
                 st.subheader("Hybrid")
