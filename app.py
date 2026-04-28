@@ -144,7 +144,7 @@ if not st.session_state.logged_in:
             """
             <div style="display:flex; align-items:center; min-height:420px; justify-content:flex-start; padding-left:8px;">
                 <div style="font-size:2.8rem; font-weight:800; color:white; text-align:left; line-height:1.1;">
-                    🚀 Welcome
+                     Welcome
                 </div>
             </div>
             """,
