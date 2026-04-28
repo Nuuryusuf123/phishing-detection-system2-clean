@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import time
 
-from utils.helpers import load_css, hero, card_open, card_close, metric_card, footer
+from utils.helpers import load_css, , card_open, card_close, metric_card, footer
 from utils.db import (
     init_db,
     authenticate,
@@ -133,10 +133,7 @@ def require_analyst_or_admin():
         st.stop()
 
 
-hero(
-    "🛡️ Hybrid ML-Based Phishing Detection System",
-    ""
-)
+st.markdown("<h2>🛡️ Hybrid ML-Based Phishing Detection System</h2>", unsafe_allow_html=True)
 
 # ---------------- LOGIN PAGE ----------------
 if not st.session_state.logged_in:
