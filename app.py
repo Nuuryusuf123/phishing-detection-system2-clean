@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import time
 
-from utils.helpers import load_css, , card_open, card_close, metric_card, footer
+from utils.helpers import load_css, card_open, card_close, metric_card, footer
 from utils.db import (
     init_db,
     authenticate,
