@@ -227,26 +227,26 @@ if not st.session_state.logged_in:
                     play_alert_sound("danger")
 
         # -------- VERIFY EMAIL --------
-        with tab4:
-            verify_user = st.text_input(
-                "Username to verify",
-                value=st.session_state.pending_verify_user if st.session_state.pending_verify_user else "",
-                key="verify_user_input"
-            )
-            st.caption("Basic verification mode. SMTP/OTP can be added later.")
-            if st.button("Verify User Email", use_container_width=True, key="verify_btn"):
-                if not verify_user.strip():
-                    st.warning("Enter a username first.")
-                    play_alert_sound("danger")
-                elif not user_exists(verify_user):
-                    st.error("User not found.")
-                    play_alert_sound("danger")
-                else:
-                    verify_user_email(verify_user)
-                    st.success("User email marked as verified.")
-                    play_alert_sound("safe")
+       # with tab4:
+           # verify_user = st.text_input(
+               # "Username to verify",
+                #value=st.session_state.pending_verify_user if st.session_state.pending_verify_user else "",
+                #key="verify_user_input"
+            #)
+            #st.caption("Basic verification mode. SMTP/OTP can be added later.")
+            #if st.button("Verify User Email", use_container_width=True, key="verify_btn"):
+                #if not verify_user.strip():
+                   # st.warning("Enter a username first.")
+                    #play_alert_sound("danger")
+               # elif not user_exists(verify_user):
+                    #st.error("User not found.")
+                   # play_alert_sound("danger")
+                #else:
+                   # verify_user_email(verify_user)
+                    #st.success("User email marked as verified.")
+                    #play_alert_sound("safe")
 
-        card_close()
+        #card_close()
 
     with right:
         st.empty()
