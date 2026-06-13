@@ -158,7 +158,7 @@ if not st.session_state.logged_in:
             unsafe_allow_html=True
         )
 
-        tab1, tab2, tab3, tab4 = st.tabs(["Login", "Sign Up", "Forgot Password", "Verify Email"])
+        tab1, tab2, tab3 = st.tabs(["Login", "Sign Up", "Forgot Password"])
 
         # -------- LOGIN --------
         with tab1:
