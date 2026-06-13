@@ -13,7 +13,7 @@ from utils.db import (
     create_user,
     change_password,
     user_exists,
-    verify_user_email,
+    #verify_user_email,
     get_all_users,
     load_activity_logs,
     log_activity,
